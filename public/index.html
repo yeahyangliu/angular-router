@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Todo List</title>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="./css/layouts/side-menu.css">
+    <!--<![endif]-->
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#home">菜单</a>
+
+            <ul>
+                <li><a href="#tech">技术</a></li>
+                <li><a href="#tech/java">读书</a></li>
+                <li >
+                    <a href="#finish"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>ToDo List</h1>
+            <h2>任务清单</h2>
+
+        </div> 
+
+        <div class="content" ng-view>
+
+         </div>
+    </div>
+</div>
+
+
+<script src="js/ui.js"></script>
+<script type="text/javascript" src="./js/angular.js"></script>
+<script type="text/javascript" src="./js/router.js"></script>
+<script type="text/javascript" src="./js/my.angular.js"></script>
+</body>
+</html>
